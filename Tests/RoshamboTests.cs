@@ -5,16 +5,20 @@ namespace RoshamboApp
     public class RoshamboTests
     {
         [Fact]
-        //Arrange
-        string inputOne = "rock";
-        string inputTwo = "rock";
-        Roshambo roshamboTest = new Roshambo();
+        public void WinChecker_ReturnTieRock_NoWin()
+        {
+            //Arrange
+            string inputOne = "rock";
+            string inputTwo = "rock";
 
-        //Act
-        roshamboTest.SetInput(inputOne, inputTwo);
-        string result = roshamboTest.WinChecker();
+            //Act
+            Roshambo roshamboTest = new Roshambo(inputOne, inputTwo);
+            // roshamboTest.SetInput(inputOne, inputTwo);
+            string result = roshamboTest.WinChecker();
 
-        //Assert
-        Assert.Equal("no input wins", result);
+            //Assert
+            Assert.Equal("no input wins", result);
+        }
+        
     }
 }

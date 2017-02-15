@@ -7,7 +7,7 @@ namespace RoshamboApp
     {
         private string _userOneInput;
         private string _userTwoInput;
-        public static Dictionary<string, string> dictname = new Dictionary<string, string>()
+        public static Dictionary<string, string> outcomes = new Dictionary<string, string>()
         {
             {"rock,rock", "no input wins"},
             {"rock,paper", "input 2 wins with paper"},
@@ -22,7 +22,7 @@ namespace RoshamboApp
 
         public Roshambo(string userOneInput, string userTwoInput)
         {
-            _userOneINput = userOneInput;
+            _userOneInput = userOneInput;
             _userTwoInput = userTwoInput;
         }
 
@@ -44,7 +44,18 @@ namespace RoshamboApp
 
         public string WinChecker()
         {
-            
+            string turn = GetUserOneInput() + "," + GetUserTwoInput();
+            string result = "";
+
+            foreach(KeyValuePair<string, string> outcome in outcomes)
+            {
+                if (turn == outcome.Key)
+                {
+                    result = outcome.Value;
+                }
+            }
+
+            return result;
         }
     }
 }
