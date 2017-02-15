@@ -18,7 +18,7 @@ namespace RoshamboApp
             {"scissors,rock", "input 2 wins with rock"},
             {"scissors,paper", "input 1 wins with scissors"},
             {"scissors,scissors", "no input wins"},
-        }
+        };
 
         public Roshambo(string userOneInput, string userTwoInput)
         {
@@ -44,7 +44,7 @@ namespace RoshamboApp
 
         public string WinChecker()
         {
-
+            
         }
     }
 }
