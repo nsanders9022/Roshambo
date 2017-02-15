@@ -1,0 +1,12 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h1>Player 2</h1>
+
+<form action="/result" method="post">
+    <button type="submit" value="rock" name="result">Rock</button>
+    <button type="submit" value="paper" name="result">Paper</button>
+    <button type="submit" value="scissors" name="result">Scissors</button>
+    <input type="hidden" name="playerOne" value="@Model">
+</form>

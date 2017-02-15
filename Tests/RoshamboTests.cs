@@ -17,7 +17,7 @@ namespace RoshamboApp
             string result = roshamboTest.WinChecker();
 
             //Assert
-            Assert.Equal("no input wins", result);
+            Assert.Equal("tie with rock", result);
         }
 
         [Fact]
@@ -77,7 +77,7 @@ namespace RoshamboApp
             string result = roshamboTest.WinChecker();
 
             //Assert
-            Assert.Equal("no input wins", result);
+            Assert.Equal("tie with paper", result);
         }
 
         [Fact]
@@ -137,7 +137,7 @@ namespace RoshamboApp
             string result = roshamboTest.WinChecker();
 
             //Assert
-            Assert.Equal("no input wins", result);
+            Assert.Equal("tie with scissors", result);
         }
 
 
