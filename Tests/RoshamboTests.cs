@@ -19,6 +19,19 @@ namespace RoshamboApp
             //Assert
             Assert.Equal("no input wins", result);
         }
-        
+        [Fact]
+        public void WinChecker_ReturnPaperWinAgainstRock_InputTwoWin()
+        {
+            //Arrange
+            string inputOne = "rock";
+            string inputTwo = "paper";
+
+            //Act
+            Roshambo roshamboTest = new Roshambo(inputOne, inputTwo);
+            string result = roshamboTest.WinChecker();
+
+            //Assert
+            Assert.Equal("input 2 wins with paper", result);
+        }
     }
 }
