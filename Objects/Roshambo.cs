@@ -43,9 +43,35 @@ namespace RoshamboApp
 
         public string WinChecker()
         {
-            // if (GetUserTwoInput == )
-            string turn = GetUserOneInput() + "," + GetUserTwoInput();
-            string result = "";
+            string turn;
+            string result ="";
+
+            if (GetUserTwoInput() == "cpu")
+            {
+                string cpuInput;
+
+                Random cpuPlay = new Random();
+                int cpuPlayTurn = cpuPlay.Next(1,4);
+
+                if (cpuPlayTurn == 1)
+                {
+                    cpuInput = "rock";
+                }
+                else if (cpuPlayTurn == 2)
+                {
+                    cpuInput = "paper";
+                }
+                else
+                {
+                    cpuInput = "scissors";
+                }
+
+                turn = GetUserOneInput() + "," + cpuInput;
+            }
+            else
+            {
+                turn = GetUserOneInput() + "," + GetUserTwoInput();
+            }
 
             foreach(KeyValuePair<string, string> outcome in outcomes)
             {
